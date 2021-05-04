@@ -1,0 +1,249 @@
+body {
+  background: #e5e5e5;
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+}
+
+/* HEADER --------------------------------------------------------------------------------*/
+.header {
+  display: flex;
+  align-items: center;
+  padding: 0 21px;
+  background: #cf2b2b;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 92px;
+  width: 100%;
+  box-shadow: 0px 4px 5px grey;
+}
+.nome {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+}
+.nome h1 {
+  font-family: "Righteous", cursive;
+  font-size: 44px;
+  font-weight: 400;
+}
+.nome p {
+  font-size: 18px;
+}
+
+/* CONTENT ---------------------------------------------------------------------------------*/
+.main-section {
+  margin-top: 130px;
+}
+.main-tag,
+.drinks-tag,
+.desserts-tag {
+  margin: 20px 0 6px 19px;
+  font-family: "Righteous", cursive;
+  font-weight: 400;
+  font-size: 26px;
+}
+.main-box,
+.drinks-box,
+.desserts-box {
+  display: flex;
+  align-items: center;
+  overflow-x: scroll;
+  padding-left: 19px;
+  margin-bottom: 25px;
+  width: 100%;
+  height: 230px;
+}
+.desserts-box {
+  margin-bottom: 150px;
+}
+.main-card,
+.drink-card,
+.dessert-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 18px 14px 14px 15px;
+  position: relative;
+  min-width: 172px;
+  height: 216px;
+  margin-right: 16px;
+  position: relative;
+}
+.card-content {
+  position: absolute;
+  width: 144px;
+  height: 185px;
+  left: 14px;
+  top: 18px;
+}
+.image {
+  width: 144px;
+  height: 87px;
+}
+img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  object-fit: cover;
+}
+h2 {
+  font-weight: 700;
+  font-size: 16px;
+  color: #333333;
+  margin-top: 5px;
+}
+.description {
+  color: #a6a6a6;
+  font-weight: 300;
+  font-size: 15px;
+  height: 40px;
+  margin-top: 10px;
+}
+.description p {
+  margin-top: 5px;
+}
+.price {
+  position: absolute;
+  bottom: 0px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+}
+.overflow-padding {
+  min-width: 4px;
+  height: 1px;
+}
+/* SELECTION --------------------------------------------------------------------------------*/
+.selection {
+  display: none;
+  position: absolute;
+  border-radius: 10px;
+  border: #32b72f solid 5px;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+ion-icon {
+  font-size: 20px;
+  color: #32b72f;
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+}
+.display {
+  display: flex;
+}
+
+/* BASEBOARD ---------------------------------------------------------------------------------*/
+.baseboard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  bottom: 0;
+  height: 92px;
+  width: 100%;
+  padding: 15px 25px;
+}
+.close {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: white;
+  border-radius: 100px;
+  text-align: center;
+  background: #cbcbcb;
+  height: 100%;
+  width: 100%;
+}
+.close-text {
+  width: 200px;
+}
+.confirmation-button {
+  position: absolute;
+  background-color: #32b72f;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  text-align: center;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+.confirmation-button p {
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 0.018em;
+}
+
+/* CONFIRMATION SCREEN ---------------------------------------------------------------------*/
+.confirmation-background {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.6);
+}
+.confirmation-screen {
+  width: 353px;
+  height: 377px;
+  color: white;
+  font-size: 22px;
+  background-color: #50d074;
+  display: flex;
+  padding: 23px 25px 0 25px;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px -3px black;
+}
+.confirmation-screen h1:nth-of-type(1) {
+  font-weight: 700;
+}
+.confirmation-screen ul {
+  width: 100%;
+  margin-top: 30px;
+}
+.confirmation-screen li {
+  font-weight: 300;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.confirmation-screen li:last-child {
+  font-weight: 700;
+  margin-top: 25px;
+  margin-bottom: 30px;
+}
+.confirm {
+  color: #50d074;
+  display: flex;
+  margin-bottom: 25px;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 700;
+  justify-content: space-around;
+  width: 330px;
+  height: 50px;
+  border-radius: 100px;
+  background-color: white;
+}
+.display {
+  display: flex;
+}
