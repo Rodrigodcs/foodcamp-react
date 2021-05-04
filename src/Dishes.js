@@ -1,6 +1,6 @@
-import Main from "/Main"
-import Drink from "/Drink"
-import Dessert from "/Dessert"
+import Main from "./Main"
+import Drink from "./Drink"
+import Dessert from "./Dessert"
 
 
 export default function Dishes(){
