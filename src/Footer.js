@@ -2,7 +2,7 @@
 
 export default function Footer(){
     return (
-        <div class="baseboard" >
+        <div class="footer" >
             <div class="close">
                 <div class="close-text">
                     <p>Selecione os 3 itens para fechar o pedido</p>

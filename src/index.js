@@ -1,16 +1,9 @@
 import ReactDOM from "react-dom";
-import Header from "./Header"
-import Dishes from "./Dishes"
-import Footer from "./Footer"
+import Main from "./Main"
 
 export default function App(){
     return (
-        <>
-            <div class="testando"></div>
-            <Header/>
-            <Dishes/>
-            <Footer/>
-        </>
+        <Main/>
     );
 }
 

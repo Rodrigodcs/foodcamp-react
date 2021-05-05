@@ -1,9 +1,13 @@
-import Card from "./Card"
+import Header from "./Header"
+import Dishes from "./Dishes"
+import Footer from "./Footer"
 
 export default function Main(){
     return (
-        <div>
-            
-        </div>
-    )
+        <>
+            <Header/>
+            <Dishes/>
+            <Footer/>
+        </>
+    );
 }
