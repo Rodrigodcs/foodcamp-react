@@ -116,6 +116,7 @@ h2 {
   min-width: 4px;
   height: 1px;
 }
+
 /* SELECTION */
 .selection {
   display: none;
@@ -138,7 +139,6 @@ h2 {
   justify-content: space-between;
   z-index:10;
 }
-
 .add{
   font-size: 20px;
   color: #32b72f;
@@ -265,6 +265,8 @@ h2 {
   font-size: 22px;
   color:#777777;
 }
+
+
 .display {
   display: flex;
 }

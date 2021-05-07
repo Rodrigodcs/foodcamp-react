@@ -48,7 +48,7 @@ export default function Confirm(props){
                         <p>{total.toFixed(2).replace(".",",")}</p>
                     </div>
                 </div>
-                <a href={"https://wa.me/5545998129347?text="+requestString}>
+                <a href={"https://wa.me/5545998022472?text="+requestString}>
                     <div className="confirm-order">Tudo certo, pode pedir!</div>
                 </a>
                 <Link to="/">
