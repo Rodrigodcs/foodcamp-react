@@ -1,20 +1,38 @@
 import {Link} from "react-router-dom"
+import Item from "./Item"
 
 export default function Confirm(props){
-    console.log(props)
-    let orderArray = [{name:props.optionsSelected.main.name,total:0},{name:props.optionsSelected.drink.name,total:0},{name:props.optionsSelected.dessert.name,total:0}]
-    let totalPrice=0;
+
+    const mainCheckOut = props.optionsSelected.main.map(i=>i)
+    const drinkCheckOut = props.optionsSelected.drink.map(i=>i)
+    const dessertCheckOut = props.optionsSelected.dessert.map(i=>i)
+    let mainTotal = 0
+    let drinkTotal = 0
+    let dessertTotal = 0
+    let total=0
     let requestString=""
 
-    function calculate(props){ 
-        orderArray[0].total = (parseFloat((props.optionsSelected.main.price).replace(",","."))*props.optionsSelected.main.quantity)
-        orderArray[1].total = (parseFloat((props.optionsSelected.drink.price).replace(",","."))*props.optionsSelected.drink.quantity)
-        orderArray[2].total = (parseFloat((props.optionsSelected.dessert.price).replace(",","."))*props.optionsSelected.dessert.quantity)
-        totalPrice=orderArray[0].total+orderArray[1].total+orderArray[2].total
-        
-        requestString = "Olá, gostaria de fazer o pedido:\n- Prato: "+ orderArray[0].name+ (props.optionsSelected.main.quantity>1?" ("+ props.optionsSelected.main.quantity+"x)" :"") +"\n- Bebida: "+ orderArray[1].name+ (props.optionsSelected.drink.quantity>1?" ("+ props.optionsSelected.drink.quantity+"x)" :"")+"\n- Sobremesa: "+ orderArray[2].name+ (props.optionsSelected.dessert.quantity>1?" ("+ props.optionsSelected.dessert.quantity+"x)" :"")+"\nTotal: R$ "+totalPrice.toFixed(2)
+    function calculate(){
+        props.optionsSelected.main.forEach(i=> mainTotal+=i.quantity*parseFloat(i.price.replace(",",".")))
+        props.optionsSelected.drink.forEach(i=> drinkTotal+=i.quantity*parseFloat(i.price.replace(",",".")))
+        props.optionsSelected.dessert.forEach(i=> dessertTotal+=i.quantity*parseFloat(i.price.replace(",",".")))
+        total=mainTotal+drinkTotal+dessertTotal
+        createRequest()
+    }
+    function createRequest(){
+        requestString = "Olá, gostaria de fazer o pedido:\n\n- Prato(s):\n"
+        mainCheckOut.forEach(i => requestString+= "   -"+i.name + (i.quantity>1?" ("+i.quantity+"x)":"")+"\n")
+        requestString+="\n- Bebida(s):\n"
+        drinkCheckOut.forEach(i => requestString+= "   -"+i.name + (i.quantity>1?" ("+i.quantity+"x)":"")+"\n")
+        requestString+="\n- Sobremesa(s):\n"
+        dessertCheckOut.forEach(i => requestString+= "   -"+i.name + (i.quantity>1?" ("+i.quantity+"x)":"")+"\n")
+        requestString+="\nTOTAL: R$ "+total.toFixed(2).replace(".",",")
+        console.log(requestString)
         requestString = encodeURIComponent(requestString);
     }
+    console.log("ggggggggggg")
+    let teste="12,55"
+    console.log(parseFloat(teste.replace(",",".")))
 
     calculate(props)
     
@@ -24,11 +42,13 @@ export default function Confirm(props){
             <div className="review-outer-box">
                 <div className="review-box">
                     <ul>
-                        {orderArray.map(i=><li><p>{i.name}</p><p>{i.total.toFixed(2).replace(".",",")}</p></li>)}
+                        {mainCheckOut.map(i => <Item name={i.name} total={((i.quantity*parseFloat(i.price.replace(",","."))).toFixed(2)).replace(".",",")}/>)}
+                        {drinkCheckOut.map(i => <Item name={i.name} total={((i.quantity*parseFloat(i.price.replace(",","."))).toFixed(2)).replace(".",",")}/>)}
+                        {dessertCheckOut.map(i => <Item name={i.name} total={((i.quantity*parseFloat(i.price.replace(",","."))).toFixed(2)).replace(".",",")}/>)}
                     </ul>
                     <div className="total">
                         <p>TOTAL</p>
-                        <p>{totalPrice.toFixed(2).replace(".",",")}</p>
+                        <p>{total.toFixed(2).replace(".",",")}</p>
                     </div>
                 </div>
                 <a href={"https://wa.me/5545998129347?text="+requestString}>

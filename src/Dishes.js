@@ -4,7 +4,7 @@ export default function Dishes(props){
     const serverData = {
         main:[
             {index:0 ,name: "Frango Yin Yang",image:"images/Main/frango_yin_yang.png",price:"32,00",description:["Acompanha arroz","Acompanha batata"]},
-            {index:1 ,name: "Feijoada",image:"images/Main/feijoada.jpg",price:"36,00",description:["Acompanha arroz","Acompanha farofa"]},
+            {index:1 ,name: "Feijoada",image:"images/Main/feijoada.jpg",price:"36,50",description:["Acompanha arroz","Acompanha farofa"]},
             {index:2 ,name: "Panqueca",image:"images/Main/panqueca.jpg",price:"25,00",description:["Com muito molho","Quaijo ralado"]},
             {index:3 ,name: "Lasagna",image:"images/Main/lasagna.jpeg",price:"28,00",description:["Bolognesa","Molho vermelho"]},
             {index:4 ,name: "Sanduiche",image:"images/Main/sanduiche.jpg",price:"15,00",description:["Muita maionese","Muito presunto"]},
