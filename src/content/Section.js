@@ -2,12 +2,8 @@ import Card from "./Card"
 import React from "react"
 
 export default function Section(props){
-    console.log(props)
     const [selectedArray,changeSelected] = React.useState(props.dish.map(i => ""))
-    console.log(selectedArray)
     function newSelection(newItem,price,name,quantity){
-        console.log(newItem)
-        console.log(quantity)
 
         let newArray=selectedArray.map(i=> i)
         

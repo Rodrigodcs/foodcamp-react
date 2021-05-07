@@ -8,8 +8,7 @@ import {BrowserRouter as Router,Switch, Route} from "react-router-dom"
 export default function Main(){
     const [checkOut,changeCheckOut]=React.useState({main:[],drink:[],dessert:[]})
     const [done, changeDone]=React.useState("")
-    console.log("okokokokoo")
-    console.log(checkOut)
+    
     function selectCheckOut(option,type){
         if(type==="main"){
             let newMain;
@@ -49,8 +48,6 @@ export default function Main(){
             }
         }
         changeCheckOut(checkOut);
-        console.log("CHECKOUT")
-        console.log(checkOut)
         checkOutCounter()
     }
 

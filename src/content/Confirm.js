@@ -27,7 +27,6 @@ export default function Confirm(props){
         requestString+="\n- Sobremesa(s):\n"
         dessertCheckOut.forEach(i => requestString+= "   -"+i.name + (i.quantity>1?" ("+i.quantity+"x)":"")+"\n")
         requestString+="\nTOTAL: R$ "+total.toFixed(2).replace(".",",")
-        console.log(requestString)
         requestString = encodeURIComponent(requestString);
     }
 
