@@ -11,7 +11,7 @@ export default function Confirm(props){
     let dessertTotal = 0
     let total=0
     let requestString=""
-
+    
     function calculate(){
         props.optionsSelected.main.forEach(i=> mainTotal+=i.quantity*parseFloat(i.price.replace(",",".")))
         props.optionsSelected.drink.forEach(i=> drinkTotal+=i.quantity*parseFloat(i.price.replace(",",".")))
@@ -30,7 +30,7 @@ export default function Confirm(props){
         requestString = encodeURIComponent(requestString);
     }
 
-    calculate(props)
+    calculate()
     
     return (
         <div className="review">

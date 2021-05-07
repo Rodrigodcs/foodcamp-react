@@ -193,6 +193,8 @@ h2 {
   justify-content: center;
 }
 .confirmation-link{
+  padding-top: 20px;
+  height:60px;
   width:100vh;
 }
 .confirmation-button p {
