@@ -11,7 +11,6 @@ export default function Main(){
     console.log("okokokokoo")
     console.log(checkOut)
     function selectCheckOut(option,type){
-
         if(type==="main"){
             let newMain;
             if(checkOut.main.length===0){
@@ -55,6 +54,10 @@ export default function Main(){
         checkOutCounter()
     }
 
+    function clearCheckOut(){
+        changeCheckOut({main:[],drink:[],dessert:[]})
+    }
+
     function checkOutCounter(){
         if(checkOut.main.length!==0 && checkOut.drink.length!==0 && checkOut.dessert.length!==0){
             changeDone("display")
@@ -72,7 +75,7 @@ export default function Main(){
                         <Footer done={done} optionsSelected={checkOut}/>
                     </Route>
                     <Route  path="/revisar">
-                        <Confirm optionsSelected={checkOut}/>
+                        <Confirm optionsSelected={checkOut} clear={clearCheckOut}/>
                     </Route>
                 </Switch>
             </Router>

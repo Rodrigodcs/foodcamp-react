@@ -30,9 +30,6 @@ export default function Confirm(props){
         console.log(requestString)
         requestString = encodeURIComponent(requestString);
     }
-    console.log("ggggggggggg")
-    let teste="12,55"
-    console.log(parseFloat(teste.replace(",",".")))
 
     calculate(props)
     
@@ -42,9 +39,9 @@ export default function Confirm(props){
             <div className="review-outer-box">
                 <div className="review-box">
                     <ul>
-                        {mainCheckOut.map(i => <Item name={i.name} total={((i.quantity*parseFloat(i.price.replace(",","."))).toFixed(2)).replace(".",",")}/>)}
-                        {drinkCheckOut.map(i => <Item name={i.name} total={((i.quantity*parseFloat(i.price.replace(",","."))).toFixed(2)).replace(".",",")}/>)}
-                        {dessertCheckOut.map(i => <Item name={i.name} total={((i.quantity*parseFloat(i.price.replace(",","."))).toFixed(2)).replace(".",",")}/>)}
+                        {mainCheckOut.map((i,index) => <Item key={index} name={i.name} total={((i.quantity*parseFloat(i.price.replace(",","."))).toFixed(2)).replace(".",",")}/>)}
+                        {drinkCheckOut.map((i,index) => <Item key={index} name={i.name} total={((i.quantity*parseFloat(i.price.replace(",","."))).toFixed(2)).replace(".",",")}/>)}
+                        {dessertCheckOut.map((i,index) => <Item key={index} name={i.name} total={((i.quantity*parseFloat(i.price.replace(",","."))).toFixed(2)).replace(".",",")}/>)}
                     </ul>
                     <div className="total">
                         <p>TOTAL</p>
@@ -55,7 +52,7 @@ export default function Confirm(props){
                     <div className="confirm-order">Tudo certo, pode pedir!</div>
                 </a>
                 <Link to="/">
-                    <div className="cancel-order">Cancelar</div>
+                    <div className="cancel-order" onClick={props.clear}>Cancelar</div>
                 </Link>
             </div>
         </div>

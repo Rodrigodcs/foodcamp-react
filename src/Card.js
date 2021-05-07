@@ -20,24 +20,27 @@ export default function Card(props){
         <li className="card">
             <div className={"selection "+props.selected}>
                 <div className="counter">
-                    <ion-icon name="remove" class="remove" onClick={removeItem}></ion-icon>
+                    <p className="remove" onClick={removeItem}>-</p>
                     <p>{quantity}</p>
-                    <ion-icon name="add" class="add" onClick={addItem}></ion-icon>
+                    <p className="add" onClick={addItem}>+</p>
                 </div>
             </div>
-            <div className="card-content" onClick={()=>enable()}>
-                <div className="image">
-                    <img src={props.item.image} alt={props.item.name}/>
-                </div>
-                <h2>{props.item.name}</h2>
-                <div className="description">
-                    <p>{props.item.description[0]}</p>
-                    <p>{props.item.description[1]}</p>
-                </div>
-                <div className="price">
-                    <p>R$ <span>{props.item.price}</span></p>
+            <div className="div-select" onClick={()=>enable()}>
+                <div className="card-content" >
+                    <div className="image">
+                        <img src={props.item.image} alt={props.item.name}/>
+                    </div>
+                    <h2>{props.item.name}</h2>
+                    <div className="description">
+                        <p>{props.item.description[0]}</p>
+                        <p>{props.item.description[1]}</p>
+                    </div>
+                    <div className="price">
+                        <p>R$ <span>{props.item.price}</span></p>
+                    </div>
                 </div>
             </div>
+            
         </li>
     )
 }
