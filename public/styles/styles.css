@@ -4,7 +4,7 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-/* HEADER --------------------------------------------------------------------------------*/
+/* HEADER */
 .header {
   display: flex;
   align-items: center;
@@ -33,7 +33,7 @@ body {
   font-size: 18px;
 }
 
-/* CONTENT ---------------------------------------------------------------------------------*/
+/* CONTENT */
 .dishes{
   margin:130px auto;
   width:100%;
@@ -43,6 +43,7 @@ body {
   font-family: "Righteous", cursive;
   font-weight: 400;
   font-size: 26px;
+  color:#333333;
 }
 .box {
   display: flex;
@@ -107,7 +108,7 @@ h2 {
   min-width: 4px;
   height: 1px;
 }
-/* SELECTION --------------------------------------------------------------------------------*/
+/* SELECTION */
 .selection {
   display: none;
   position: absolute;
@@ -142,7 +143,7 @@ ion-icon {
   display: flex;
 }
 
-/* FOOTER ---------------------------------------------------------------------------------*/
+/* FOOTER */
 .footer{
   display: flex;
   justify-content: center;
@@ -183,6 +184,9 @@ ion-icon {
   align-items: center;
   justify-content: center;
 }
+.confirmation-link{
+  width:100vh;
+}
 .confirmation-button p {
   font-size: 20px;
   font-weight: 700;
@@ -190,65 +194,69 @@ ion-icon {
   letter-spacing: 0.018em;
 }
 
-/* CONFIRMATION SCREEN ---------------------------------------------------------------------*/
-.confirmation-background {
-  display: none;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  z-index: 2;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.6);
+/* CONFIRMATION SCREEN */
+.review{
+  margin:0 auto;
+  margin-top:130px;
+  padding:0 25px;
+  max-width: 450px;
 }
-.confirmation-screen {
-  width: 353px;
-  height: 377px;
-  color: white;
-  font-size: 22px;
-  background-color: #50d074;
-  display: flex;
-  padding: 23px 25px 0 25px;
+.review .label{
+  margin-left:0;
+}
+.review-outer-box{
+  margin-top:30px;
+  display:flex;
   flex-direction: column;
   align-items: center;
+}
+.review-box p{
+  font-size: 22px;
+  color:#333333;
+}
+.review-box{
+  width:100%;
+  max-width: 400px;
+  background-color: white;
   border-radius: 10px;
-  box-shadow: 0px 0px 15px -3px black;
-}
-.confirmation-screen h1:nth-of-type(1) {
-  font-weight: 700;
-}
-.confirmation-screen ul {
-  width: 100%;
-  margin-top: 30px;
-}
-.confirmation-screen li {
-  font-weight: 300;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 15px;
-}
-.confirmation-screen li:last-child {
-  font-weight: 700;
-  margin-top: 25px;
   margin-bottom: 30px;
+  padding:30px 30px;
 }
-.confirm {
-  color: #50d074;
+.review-box ul{
+  display:flex;
+  flex-direction: column;
+  gap:10px;
+}
+.review-box li{
+  display:flex;
+  justify-content: space-between;
+}
+.total{
+  font-weight: 700;
+  display:flex;
+  justify-content: space-between;
+  margin-top:30px;
+}
+.confirm-order{
+  color: white;
   display: flex;
   margin-bottom: 25px;
   flex-direction: column;
   align-items: center;
+  font-size: 22px;
   font-weight: 700;
   justify-content: space-around;
   width: 330px;
   height: 50px;
   border-radius: 100px;
-  background-color: white;
+  background-color: #50d074;
 }
+.cancel-order{
+  font-weight: 700;
+  font-size: 22px;
+  color:#333333;
+}
+
 .display {
   display: flex;
 }

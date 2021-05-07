@@ -27,7 +27,7 @@ export default function Dishes(props){
         ],
     }
     return (
-        <div class="dishes">
+        <div className="dishes">
             <Section dish={serverData.main} label="Primeiro, seu prato" done={props.done} type="main"/>
             <Section dish={serverData.drink} label="Agora, sua bebida" done={props.done} type="drink"/>
             <Section dish={serverData.dessert} label="Por fim, sua sobremesa"done={props.done} type="dessert"/>

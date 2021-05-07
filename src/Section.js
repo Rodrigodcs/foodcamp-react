@@ -2,9 +2,7 @@ import Card from "./Card"
 import React from "react"
 
 export default function Section(props){
-    console.log(props.dish)
     const [selectedArray,changeSelected] = React.useState(props.dish.map(i => ""))
-    console.log(selectedArray)
     function newSelection(newItem,price,name,quantity){
         const newArray=selectedArray.map((item,index)=> index===newItem?"display":"")
         changeSelected(newArray)
@@ -13,11 +11,11 @@ export default function Section(props){
     }
 
     return (
-        <div class="section">
-            <div class="label"><p>{props.label}</p></div>
-            <ul class="box">
+        <div className="section">
+            <div className="label"><p>{props.label}</p></div>
+            <ul className="box">
                 {props.dish.map((p,i) => <Card item={p} selected={selectedArray[i]} select={newSelection}/>)}
-                <li class="overflow-padding"></li>
+                <li className="overflow-padding"></li>
             </ul>
         </div>
     )

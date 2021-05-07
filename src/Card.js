@@ -13,24 +13,24 @@ export default function Card(props){
     }
 
     return (
-        <li class="card">
-            <div class={"selection "+props.selected}>
-                <div class="counter">
-                    <ion-icon name="remove" class="remove" onClick={removeItem}></ion-icon>
+        <li className="card">
+            <div className={"selection "+props.selected}>
+                <div className="counter">
+                    <ion-icon name="remove" className="remove" onClick={removeItem}></ion-icon>
                     <p>{quantity}</p>
-                    <ion-icon name="add" class="add" onClick={addItem}></ion-icon>
+                    <ion-icon name="add" className="add" onClick={addItem}></ion-icon>
                 </div>
             </div>
-            <div class="card-content" onClick={() => props.select(props.item.index,props.item.price,props.item.name,quantity)}>
-                <div class="image">
+            <div className="card-content" onClick={() => props.select(props.item.index,props.item.price,props.item.name,quantity)}>
+                <div className="image">
                     <img src={props.item.image}/>
                 </div>
                 <h2>{props.item.name}</h2>
-                <div class="description">
+                <div className="description">
                     <p>{props.item.description[0]}</p>
                     <p>{props.item.description[1]}</p>
                 </div>
-                <div class="price">
+                <div className="price">
                     <p>R$ <span>{props.item.price}</span></p>
                 </div>
             </div>
